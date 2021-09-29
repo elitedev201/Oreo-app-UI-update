@@ -1,0 +1,29 @@
+// Oreo App
+export const ADD_TO_CART = 'cart/ADD_TO_CART';
+export const ADD_TO_CART_SUCCESS = 'cart/ADD_TO_CART_SUCCESS';
+
+export const ADD_LIST_CART = 'cart/ADD_LIST_CART';
+export const ADD_LIST_CART_SUCCESS = 'cart/ADD_LIST_CART_SUCCESS';
+export const ADD_LIST_CART_ERROR = 'cart/ADD_LIST_CART_ERROR';
+
+export const REMOVE_FROM_CART = 'cart/REMOVE_FROM_CART';
+export const REMOVE_FROM_CART_SUCCESS = 'cart/REMOVE_FROM_CART_SUCCESS';
+export const REMOVE_FROM_CART_ERROR = 'cart/REMOVE_FROM_CART_ERROR';
+
+export const UPDATE_QUANTITY_CART = 'cart/UPDATE_QUANTITY_CART';
+export const UPDATE_QUANTITY_CART_SUCCESS = 'cart/UPDATE_QUANTITY_CART_SUCCESS';
+export const UPDATE_QUANTITY_CART_ERROR = 'cart/UPDATE_QUANTITY_CART_ERROR';
+
+export const GET_CART = 'cart/GET_CART';
+export const GET_CART_SUCCESS = 'cart/GET_CART_SUCCESS';
+export const GET_CART_ERROR = 'cart/GET_CART_ERROR';
+
+export const ADD_COUPON = 'cart/ADD_COUPON';
+export const ADD_COUPON_SUCCESS = 'cart/ADD_COUPON_SUCCESS';
+export const ADD_COUPON_ERROR = 'cart/ADD_COUPON_ERROR';
+
+export const REMOVE_COUPON = 'cart/REMOVE_COUPON';
+export const REMOVE_COUPON_SUCCESS = 'cart/REMOVE_COUPON_SUCCESS';
+export const REMOVE_COUPON_ERROR = 'cart/REMOVE_COUPON_ERROR';
+
+export const CLEAR_CART = 'cart/CLEAR_CART';
