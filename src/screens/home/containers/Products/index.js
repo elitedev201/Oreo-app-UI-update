@@ -33,11 +33,11 @@ class Products extends React.Component {
     let widthImage =
       fields.width && parseInt(fields.width, 10)
         ? parseInt(fields.width, 10)
-        : 204;
+        : 175;
     let heightImage =
       fields.height && parseInt(fields.height, 10)
         ? parseInt(fields.height, 10)
-        : 257;
+        : 267;
 
     const typeShow = productListLayout[layout]
       ? productListLayout[layout]
@@ -64,7 +64,7 @@ class Products extends React.Component {
           data={data}
           width={widthImage}
           height={heightImage}
-          widthView={widthView}
+          widthView={widthView * 0.87}
           col={col}
           box={fields.boxed}
           navigationType={navigationType}

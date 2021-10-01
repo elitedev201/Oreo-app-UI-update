@@ -29,14 +29,9 @@ const SelectSize = (
   const {t} = useTranslation();
 
   const [isModalVisible, setModalVisible] = useState(false);
-  const [size, setSize] = useState('xxl');
+  const [size, setSize] = useState('XXL');
 
   const showModal = () => {
-    setModalVisible(!isModalVisible);
-  };
-
-  const selectSize = param => {
-    setSize(param);
     setModalVisible(!isModalVisible);
   };
 
@@ -54,38 +49,7 @@ const SelectSize = (
                   Select your size
                 </Text>
               </View>
-              <ScrollView style={{paddingTop: 20}} overScrollMode="always">
-                <TouchableOpacity onPress={() => selectSize('s')}>
-                  <Row style={styles.alignBtn}>
-                    <Text style={styles.sizeBtn}>Out Of Stock</Text>
-                    <Text style={{color: 'black', fontSize: 20}}>S</Text>
-                  </Row>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => selectSize('m')}>
-                  <Row style={styles.alignBtn}>
-                    <Text style={styles.sizeBtn}>Out Of Stock</Text>
-                    <Text style={{color: 'black', fontSize: 20}}>M</Text>
-                  </Row>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => selectSize('x')}>
-                  <Row style={styles.alignBtn}>
-                    <Text style={styles.sizeBtn}>Last 1 Left</Text>
-                    <Text style={{color: 'black', fontSize: 20}}>X</Text>
-                  </Row>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => selectSize('xl')}>
-                  <Row style={styles.alignBtn}>
-                    <Text style={styles.sizeBtn}>Last 3 Left</Text>
-                    <Text style={{color: 'black', fontSize: 20}}>XL</Text>
-                  </Row>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => selectSize('xxl')}>
-                  <Row style={styles.alignBtn}>
-                    <Text style={styles.sizeBtn}>Last 1 Left</Text>
-                    <Text style={{color: 'black', fontSize: 20}}>XXL</Text>
-                  </Row>
-                </TouchableOpacity>
-              </ScrollView>
+
               <View style={styles.modalFooter}></View>
             </View>
           ) : (
@@ -114,10 +78,11 @@ const SelectSize = (
           <Image
             style={{
               position: 'absolute',
-              top: 8,
-              left: 15,
-              width: 30,
-              height: 30,
+              top: 10,
+              left: 20,
+              width: 20,
+              height: 20,
+              resizeMode: 'cover',
             }}
             source={require('../../../assets/images/size_icon.png')}
           />
@@ -136,14 +101,16 @@ const SelectSize = (
             <Text
               style={{
                 position: 'absolute',
-                top: 8,
-                right: 15,
-                fontSize: 20,
+                top: 10,
+                right: 23,
+                fontSize: 10,
                 backgroundColor: 'black',
                 color: 'white',
                 borderRadius: 5,
-                paddingLeft: 10,
-                paddingRight: 10,
+                paddingTop: 3,
+                paddingBottom: 3,
+                paddingLeft: 8,
+                paddingRight: 8,
               }}>
               {size}
             </Text>
@@ -163,13 +130,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 5,
     marginLeft: -10,
-    zIndex: 100,
+    zIndex: 99999,
   },
   modalHeader: {
     position: 'relative',
     padding: 20,
     borderBottomColor: '#D3D3D3',
     borderBottomWidth: 1,
+    zIndex: 999,
   },
   sizeBtn: {
     justifyContent: 'space-between',

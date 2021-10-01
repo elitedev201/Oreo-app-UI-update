@@ -37,11 +37,11 @@ const Heading = function (props: Props) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    paddingVertical: padding.big,
+    paddingVertical: padding.small,
   },
   textTitle: {
     flex: 1,
-    fontSize: sizes.h3,
+    fontSize: sizes.h6,
     paddingRight: padding.large,
   },
   touchSubtitle: {

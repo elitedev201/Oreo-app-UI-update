@@ -45,8 +45,7 @@
     "text_submit": "ارسال",
     "text_search": "بحث",
     "text_select": "تحديد",
-    "text_add_cart": "أضف الى الحقيبة",
-    "text_select_size": "اختر مقاسك",
+    "text_add_cart": "أضف إلى السلة",
     "text_view_cart": "عرض السلة",
     "text_choose_item": "اختيار المنتج",
     "text_items": "{{count}} منتجات",
@@ -62,14 +61,13 @@
     "text_shopping_now": "تسوق الآن",
     "text_go_shopping": "اذهب للتسوق",
     "text_sale_percent": "بيع {{percent}}٪",
-    "text_help" : "المساعدة والمعلومات",
-    "text_search_country_mobile" : "أكتب هنا...",
-    "text_add" : "إضافة",
-    "text_save" : "حفظ",
-    "text_sales" : "مبيعات",
-    "text_state" : "ولايه دوله",
-    "text_downloads": "التحميلات",
-    "text_customer_reviews": "آراء العملاء"
+    "text_help": "المساعدة والمعلومات",
+    "text_search_country_mobile": "أكتب هنا...",
+    "text_add": "إضافة",
+    "text_save": "حفظ",
+    "text_sales": "مبيعات",
+    "text_state": "ولايه دوله",
+    "text_downloads": "التحميلات"
   },
   "auth": {
     "text_input_email_address": "عنوان البريد الإلكتروني أو اسم المستخدم *",
@@ -106,8 +104,6 @@
     "text_refine": "صقل",
 
     "text_description": "وصف",
-    "text_details": "تفاصيل",
-    "text_shipping_returns": "الشحن والاسترجاع",
     "text_information": "معلومة اضافية",
     "text_reviews": "استعراض",
     "text_title_like": "قد تحب ذلك",
@@ -141,7 +137,7 @@
     "text_review_input_name": "اسم",
     "text_review_input_email": "البريد الإلكتروني",
 
-    "text_related": "قد تكون مهتمًا بـ ...",
+    "text_related": "قد يعجبك ذلك",
 
     "text_choose_cart": "يرجى اختيار كمية العناصر التي ترغب في إضافتها إلى سلة التسوق الخاصة بك ...",
 
@@ -166,6 +162,8 @@
     "text_go_checkout": "إكمال الدفع",
     "text_delivery": "التوصيل",
     "text_shipping_method": "طريقة الشحن",
+    "text_details": "تفاصيل",
+    "text_shipping_returns": "الشحن والاسترجاع",
     "text_use_billing": "استخدام كعنوان للدفع",
     "text_use_my_address": "استيراد عنوان",
     "text_payment_method": "طريقة الدفع او السداد",
@@ -267,18 +265,18 @@
     "text_research": "ابحاث",
     "text_about_description": "تحدد سياسة الخصوصية هذه المعلومات التي نجمعها ، والأسباب التي نجمع بها هذه المعلومات ، وكيف يمكننا استخدام هذه المعلومات ومشاركتها.",
 
-    "text_description_edit_account" : "ستكون هذه هي الطريقة التي سيتم بها عرض اسمك في قسم الحساب وفي المراجعات.",
+    "text_description_edit_account": "ستكون هذه هي الطريقة التي سيتم بها عرض اسمك في قسم الحساب وفي المراجعات.",
 
-    "text_info" : "معلومات الطلب",
-    "text_order_note" : "مذكرة الطلب",
-    "text_subtotal" : "المجموع الفرعي {{cost}}",
-    "text_tax" : "الضريبة {{cost}}",
-    "text_shipping" : "الشحن {{cost}}",
-    "text_discount" : "خصم {{cost}}",
-    "text_refund" : "إعادة مال",
-    "text_shipping_info" : "معلومات الشحن",
-    "text_billing_address" : "عنوان وصول الفواتير",
-    "text_note_order" : "ترتيب الملاحظات"
+    "text_info": "معلومات الطلب",
+    "text_order_note": "مذكرة الطلب",
+    "text_subtotal": "المجموع الفرعي {{cost}}",
+    "text_tax": "الضريبة {{cost}}",
+    "text_shipping": "الشحن {{cost}}",
+    "text_discount": "خصم {{cost}}",
+    "text_refund": "إعادة مال",
+    "text_shipping_info": "معلومات الشحن",
+    "text_billing_address": "عنوان وصول الفواتير",
+    "text_note_order": "ترتيب الملاحظات"
   },
   "blog": {
     "text_lastest": "أحدث هذه",
@@ -323,9 +321,9 @@
     "text_subtitle_cart": "المنتجات المضافة إلى السلة سوف تظهر هنا",
     "text_title_order": "لم تطلب بعد",
     "text_subtitle_order": "طلباتي",
-    "text_title_download": "You have not file yet",
+    "text_title_download": "You have not file yet"
   },
-  "validators" : {
+  "validators": {
     "text_email": "البريد الإلكتروني غير صحيح!",
     "text_password": "يجب أن تكون كلمة المرور بين 6 و 20 حرفًا!",
     "text_first_name": "يجب أن يكون الاسم الأول بين 1 و 32 حرفًا!",

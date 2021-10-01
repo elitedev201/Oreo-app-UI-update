@@ -51,10 +51,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textStart: {
-    marginRight: 7,
+    marginRight: 5,
   },
   textEnd: {
-    marginLeft: 7,
+    marginLeft: 5,
   },
 });
 
@@ -62,7 +62,6 @@ Rating.defaultProps = {
   startingValue: 1,
   count: 5,
   size: 12,
-  pad: 4,
   readonly: false,
   onStartRating: () => {},
 };

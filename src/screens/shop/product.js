@@ -31,8 +31,8 @@ import ProductGrouped from './product/ProductGrouped';
 import CategoryName from './product/CategoryName';
 import ProductImages from './product/ProductImages';
 import ProductStock from './product/ProductStock';
-import FooterProduct from './product/FooterProduct';
 import SelectSize from './product/SelectSize';
+import FooterProduct from './product/FooterProduct';
 
 import {getVariations} from 'src/modules/product/service';
 import {
@@ -65,17 +65,14 @@ import {
   isLoadingVendorSelector,
 } from 'src/modules/vendor/selectors';
 
-import Icon from 'react-native-vector-icons/Entypo';
-
 const {height} = Dimensions.get('window');
-const HEADER_MAX_HEIGHT = height * 0.6;
+const HEADER_MAX_HEIGHT = height * 0.84;
 
 class Product extends Component {
   constructor(props, context) {
     super(props, context);
 
     const {route, data, currency, defaultCurrency} = props;
-
     const product = route?.params?.product ?? {};
     // no need get days in prepareProductItem
     const dataPrepare = prepareProductItem(
@@ -216,7 +213,7 @@ class Product extends Component {
         <Price
           price_format={price_format}
           type={type}
-          h4
+          h6
           isPercentSale
           // style={styles.viewPrice}
         />
@@ -304,21 +301,9 @@ class Product extends Component {
             height={HEADER_MAX_HEIGHT}
           />
         }
-        // footerElement={
-        //   configs.get('toggleCheckout') &&
-        //   valueCheck.get('purchasable') &&
-        //   stock_status.includes(valueCheck.get('stock_status')) && (
-        //     <FooterProduct
-        //       isAddToCart={isAddToCart}
-        //       onPressAddCart={this.addToCart}
-        //       loading={loading}
-        //       onPressViewCart={() => navigation.navigate(homeTabs.cart)}
-        //     />
-        //   )
-        // }
         heightViewImage={HEADER_MAX_HEIGHT}>
         <Container style={styles.container}>
-          <Text h2 medium style={styles.textName}>
+          <Text h4 medium style={styles.textName}>
             {unescape(product.get('name'))}
           </Text>
           {configs.get('toggleShortDescriptionProduct') &&
@@ -349,7 +334,6 @@ class Product extends Component {
                 onPressViewCart={() => navigation.navigate(homeTabs.cart)}
               />
             )}
-
           <View style={styles.viewCategoryRating}>
             {configs.get('toggleReviewProduct') ? (
               <TouchableOpacity
@@ -363,9 +347,8 @@ class Product extends Component {
                 }></TouchableOpacity>
             ) : null}
           </View>
-
           <ListItem
-            title={t('catalog:text_details')}
+            title={t('text_details')}
             onPress={() =>
               this.props.navigation.navigate(mainStack.product_description, {
                 description: product.get('description'),
@@ -373,27 +356,24 @@ class Product extends Component {
             }
             leftElement={
               <Image
-                style={{height: 30, width: 30}}
+                style={{height: 20, width: 20}}
                 resizeMode="contain"
                 source={require('src/assets/images/three_dot.png')}
               />
             }
-            small
             type="underline"
           />
-
           {product.get('attributes') && product.get('attributes').size ? (
             <ListItem
-              title={t('catalog:text_shipping_returns')}
+              title={t('text_shipping_returns')}
               onPress={() =>
                 this.props.navigation.navigate(mainStack.product_attribute, {
                   attributes: product.get('attributes'),
                 })
               }
-              small
               leftElement={
                 <Image
-                  style={{height: 30, width: 30}}
+                  style={{height: 20, width: 20}}
                   resizeMode="contain"
                   source={require('src/assets/images/shiping_icon.png')}
                 />
@@ -401,10 +381,9 @@ class Product extends Component {
               type="underline"
             />
           ) : null}
-
           {configs.get('toggleReviewProduct') ? (
             <ListItem
-              title={t('catalog:text_reviews')}
+              title={t('text_reviews')}
               onPress={() =>
                 this.props.navigation.navigate(mainStack.product_review, {
                   product_id: product.get('id'),
@@ -412,10 +391,9 @@ class Product extends Component {
                   name: product.get('name'),
                 })
               }
-              small
               leftElement={
                 <Image
-                  style={{height: 30, width: 30}}
+                  style={{height: 20, width: 20}}
                   resizeMode="contain"
                   source={require('src/assets/images/review_icon.png')}
                 />
@@ -423,21 +401,19 @@ class Product extends Component {
               rightElement={
                 <View style={{display: 'flex', flexDirection: 'row'}}>
                   <Rating
-                    size={12}
+                    size={10}
                     startingValue={rating}
                     color="black"
                     readonly
                   />
                   <Text style={styles.textRating}>
-                    ({product.get('rating_count')}{' '}
-                    {t('common:text_customer_reviews')})
+                    ({product.get('rating_count')} {t('text_customer_reviews')})
                   </Text>
                 </View>
               }
               type="underline"
             />
           ) : null}
-
           {loadingVendor ? (
             <ItemVendorLoading style={styles.vendor} />
           ) : vendorDetail && vendorDetail.size > 0 ? (
@@ -460,7 +436,7 @@ class Product extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: margin.large,
+    marginVertical: 5,
   },
   viewCategoryRating: {
     flexDirection: 'row',
@@ -478,18 +454,19 @@ const styles = StyleSheet.create({
   },
   textRating: {
     fontSize: 10,
-    lineHeight: 15,
-    marginLeft: margin.small / 2,
+    //lineHeight: 10,
+    marginLeft: margin.small,
   },
   textName: {
-    marginBottom: margin.small,
+    fontSize: 5,
+    marginTop: 3,
+    // marginBottom: margin.small,
   },
   viewPrice: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: margin.large,
-    marginTop: margin.small,
   },
   textDescription: {
     marginBottom: margin.large,

@@ -11,6 +11,7 @@ import {
   ActivityIndicator,
   Share,
   Platform,
+  ScrollView,
 } from 'react-native';
 import {Image, Icon} from 'src/components';
 import ImageViewer from 'react-native-image-zoom-viewer';
@@ -213,7 +214,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     left: 0,
-    // alignItems: 'flex-start',
+    alignItems: 'flex-start',
     paddingTop: getStatusBarHeight(),
     zIndex: 9999,
   },

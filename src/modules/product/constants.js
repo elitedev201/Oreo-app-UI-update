@@ -29,5 +29,3 @@ export const ADD_REVIEW_ERROR = 'product/ADD_REVIEW_ERROR';
 export const FETCH_RATING = 'product/FETCH_RATING';
 export const FETCH_RATING_SUCCESS = 'product/FETCH_RATING_SUCCESS';
 export const FETCH_RATING_ERROR = 'product/FETCH_RATING_ERROR';
-
-export const SELECT_SIZE = 'product/SELECT_SIZE';

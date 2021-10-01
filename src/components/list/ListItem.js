@@ -234,7 +234,7 @@ const styles = {
     borderColor: theme.colors.border,
     borderRadius: borderRadius.large,
     paddingHorizontal: padding.large,
-    minHeight: 59,
+    minHeight: 42,
     // paddingVertical: padding.large + 2,
   }),
   containerUnderline: {
@@ -250,6 +250,7 @@ const styles = {
   title: {
     backgroundColor: 'transparent',
     lineHeight: 20,
+    fontSize: 12,
 
     // ...Platform.select({
     //   ios: {

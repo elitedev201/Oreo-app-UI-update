@@ -2,11 +2,8 @@ import React from 'react';
 import {useTranslation} from 'react-i18next';
 import Container from 'src/containers/Container';
 import {Row, Col} from 'src/containers/Gird';
-import {
-  View,
-  Text
-} from 'react-native';
 import Button from 'src/containers/Button';
+import {View} from 'react-native';
 
 import {margin} from 'src/components/config/spacing';
 
@@ -19,7 +16,7 @@ const FooterProduct = ({
   const {t} = useTranslation();
 
   return (
-    <View style={{marginBottom: margin.big, marginTop: margin.large}}>
+    <View style={{marginBottom: margin.small, marginTop: margin.small}}>
       <Row>
         <Col>
           <Button

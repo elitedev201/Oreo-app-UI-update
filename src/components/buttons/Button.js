@@ -139,7 +139,7 @@ class Button extends Component {
                   disabled && styles.disabledTitle(theme),
                   disabled && disabledTitleStyle,
                 ])}
-                medium
+                small
                 {...textProps}>
                 {title}
               </Text>
@@ -212,7 +212,7 @@ const styles = {
     borderRadius: 3,
     backgroundColor:
       type === 'solid' ? theme.Button.backgroundColor : 'transparent',
-    minHeight: size === 'small' ? 34 : 46,
+    minHeight: size === 'small' ? 34 : 43,
     paddingHorizontal: 12,
     borderWidth: type !== 'clear' ? 1 : 0,
     borderColor:

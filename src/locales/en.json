@@ -45,8 +45,11 @@
     "text_submit": "Submit",
     "text_search": "Search",
     "text_select": "Select",
-    "text_add_cart": "ADD TO BAG",
+
     "text_select_size": "SELECT YOUR SIZE",
+    "text_details": "Details",
+    "text_shipping_returns": "Shipping & Return",
+    "text_add_cart": "ADD TO BAG",
     "text_view_cart": "View Cart",
     "text_choose_item": "Choose item",
     "text_read_more": "Read more",
@@ -64,14 +67,15 @@
     "text_shopping_now": "Shop now",
     "text_go_shopping": "Go Shopping",
     "text_sale_percent": "Sale {{percent}}%",
-    "text_help" : "Help & Info",
-    "text_search_country_mobile" : "Type Here...",
-    "text_add" : "Add",
-    "text_save" : "Save",
-    "text_sales" : "Sales",
-    "text_state" : "State/Country",
+    "text_help": "Help & Info",
+    "text_search_country_mobile": "Type Here...",
+    "text_add": "Add",
+    "text_save": "Save",
+    "text_sales": "Sales",
+    "text_state": "State/Country",
     "text_downloads": "Downloads",
-    "text_customer_reviews": "Customer Reviews"
+    "text_customer_reviews": "Customer Reviews",
+    "text_reviews": "Reviews"
   },
   "auth": {
     "text_input_email_address": "Email Address or Username *",
@@ -112,11 +116,9 @@
     "text_refine": "Refine",
 
     "text_description": "Description",
-    "text_details": "Details",
-    "text_shipping_returns": "Shipping & Returns",
     "text_information": "Additional information",
     "text_reviews": "Reviews",
-    "text_title_like": "You may also like",
+    "text_title_like": "You may be interested in ...",
     "text_stock": "In-stock",
     "text_in_stock": "{{count}} in-stock",
     "text_stock_out": "Out of stock",
@@ -278,17 +280,17 @@
     "text_research": "Research",
     "text_about_description": "This Privacy Policy sets out the information that we collect, the reasons for which we collect that information, and how we can use and share that information.",
 
-    "text_description_edit_account" : "This will be how your name will be displayed in the account section and in reviews.",
-    "text_info" : "Order Information",
-    "text_order_note" : "Order Note",
-    "text_subtotal" : "Subtotal {{cost}}",
-    "text_tax" : "Tax {{cost}}",
-    "text_shipping" : "Shipping {{cost}}",
-    "text_discount" : "Discount {{cost}}",
-    "text_refund" : "Refund",
-    "text_shipping_info" : "Shipping Information",
-    "text_billing_address" : "Billing Address",
-    "text_note_order" : "Note order"
+    "text_description_edit_account": "This will be how your name will be displayed in the account section and in reviews.",
+    "text_info": "Order Information",
+    "text_order_note": "Order Note",
+    "text_subtotal": "Subtotal {{cost}}",
+    "text_tax": "Tax {{cost}}",
+    "text_shipping": "Shipping {{cost}}",
+    "text_discount": "Discount {{cost}}",
+    "text_refund": "Refund",
+    "text_shipping_info": "Shipping Information",
+    "text_billing_address": "Billing Address",
+    "text_note_order": "Note order"
   },
   "blog": {
     "text_lastest": "Lastest",
@@ -335,7 +337,7 @@
     "text_subtitle_order": "Keep track of your orders and returns",
     "text_title_download": "You have no files yet to download"
   },
-  "validators" : {
+  "validators": {
     "text_email": "E-Mail does not appear to be valid!",
     "text_password": "Password must be between 6 and 20 characters!",
     "text_first_name": "First Name must be between 1 and 32 characters!",

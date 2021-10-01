@@ -3,8 +3,6 @@ import React from 'react';
 import {compose} from 'recompose';
 import {connect} from 'react-redux';
 
-import merge from 'lodash/merge';
-
 import {useNavigation} from '@react-navigation/native';
 import {useTranslation} from 'react-i18next';
 
@@ -15,10 +13,8 @@ import {
   TouchableOpacity,
   ActivityIndicator,
 } from 'react-native';
-import {withTheme, Image, Badge, Text, ThemeConsumer} from 'src/components';
+import {withTheme, Image, Badge, Text} from 'src/components';
 import WishListIcon from '../WishListIcon';
-import TextHtml from 'src/containers/TextHtml';
-import {changeColor, changeSize} from 'src/utils/text-html';
 import Price from '../Price';
 import Rating from '../Rating';
 
@@ -56,9 +52,7 @@ const ItemDefault = React.memo(props => {
     rating_count,
     purchasable,
     stock_status,
-    short_description,
   } = item;
-  console.log(short_description, 'item info +++++++++++++++++++++++');
   const {t} = useTranslation();
 
   const productItemStyle = {
@@ -124,38 +118,31 @@ const ItemDefault = React.memo(props => {
       </View>
       <View style={styles.viewInfo}>
         <Text
+          h6
           style={[
             styles.textName,
             {
-              color: 'black',
-              fontWeight: 'bold',
-              fontSize: 18,
+              color: theme.ProductItem.color,
             },
           ]}>
           {unescape(name)}
         </Text>
-
-        {short_description ? (
-          <View style={styles.viewDescription}>
-            <ThemeConsumer>
-              {({theme}) => (
-                <TextHtml
-                  value={short_description}
-                  style={merge(
-                    changeSize('h6'),
-                    changeColor(theme.Text.third.color),
-                  )}
-                />
-              )}
-            </ThemeConsumer>
-          </View>
-        ) : null}
-
         <Price
           price_format={price_format}
           type={type}
           style={styles.textPrice}
         />
+        {configs.get('toggleReviewProduct') &&
+        configs.get('toggleRatingProduct') ? (
+          <View style={styles.viewFooter}>
+            <Rating
+              size={12}
+              startingValue={parseFloat(average_rating)}
+              readonly
+            />
+            <Text style={styles.nameRating}>({rating_count})</Text>
+          </View>
+        ) : null}
       </View>
     </TouchableOpacity>
   );
@@ -197,9 +184,6 @@ const styles = StyleSheet.create({
     fontSize: 10,
     lineHeight: 15,
     marginLeft: margin.small - 2,
-  },
-  viewDescription: {
-    marginBottom: margin.small,
   },
   buttonAdd: {
     backgroundColor: black,

@@ -56,7 +56,7 @@ const ItemSecondary = ({item, width, height, navigationType, style, theme}) => {
         PlaceholderContent={<ActivityIndicator />}
       />
       <View style={styles.content}>
-        <Text large colorSecondary style={styles.name}>
+        <Text medium colorSecondary style={styles.name}>
           {unescape(name)}
         </Text>
         <Price price_format={price_format} type={type} />

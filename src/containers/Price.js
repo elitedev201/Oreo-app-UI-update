@@ -38,7 +38,6 @@ export function Price(props) {
   if (type === 'variable' || type === 'grouped') {
     return (
       <Text colorThird style={[styleTextSmall, style && style]}>
-        {`${t('common:text_from')} `}
         <Text medium style={styleText}>
           {price_format.regular_price}
         </Text>

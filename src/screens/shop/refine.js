@@ -147,9 +147,9 @@ class RefineScreen extends React.Component {
 
           {sortBy.map(item => this.renderSortBy(item))}
 
-          {/* <Text h3 medium style={styles.textFilter}>
+          <Text h3 medium style={styles.textFilter}>
             {t('catalog:text_filter')}
-          </Text> */}
+          </Text>
 
           {category ? (
             <ListItem

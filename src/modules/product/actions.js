@@ -150,5 +150,3 @@ export function addReview(data: object, cb = () => {}): Action {
     },
   };
 }
-
-// export function setSize()

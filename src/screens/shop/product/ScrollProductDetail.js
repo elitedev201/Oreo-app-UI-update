@@ -128,8 +128,6 @@ class ScrollProductDetail extends Component {
 const styles = StyleSheet.create({
   scrollview: {
     flex: 1,
-    position: 'relative',
-    zIndex: 1,
   },
   header: {
     position: 'absolute',
